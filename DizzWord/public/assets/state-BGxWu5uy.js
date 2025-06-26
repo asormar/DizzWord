@@ -11,7 +11,7 @@ import{a as reactExports,o as useLocation,p as useNavigate,v as useParams,x as u
 `+d+"}"}}return r.pop(),s=d,C}function D(i){if(i.length===0)return h(i);const d=String.fromCodePoint(i.codePointAt(0));if(!util.isIdStartChar(d))return h(i);for(let a=d.length;a<i.length;a++)if(!util.isIdContinueChar(String.fromCodePoint(i.codePointAt(a))))return h(i);return i}function m(i){if(r.indexOf(i)>=0)throw TypeError("Converting circular structure to JSON5");r.push(i);let d=s;s=s+p;let a=[];for(let C=0;C<i.length;C++){const F=A(String(C),i);a.push(F!==void 0?F:"null")}let l;if(a.length===0)l="[]";else if(p==="")l="["+a.join(",")+"]";else{let C=`,
 `+s,F=a.join(C);l=`[
 `+s+F+`,
-`+d+"]"}return r.pop(),s=d,l}};const JSON5={parse,stringify};var lib=JSON5;const EVENT="ws://localhost:8000/_event",UPLOAD="http://localhost:8000/_upload",env={EVENT,UPLOAD},version="0.8.0a6",reflexEnvironment={version};var cookie={};/*!
+`+d+"]"}return r.pop(),s=d,l}};const JSON5={parse,stringify};var lib=JSON5;const EVENT="wss://dizzword.up.railway.app/_event",UPLOAD="https://dizzword.up.railway.app/_upload",env={EVENT,UPLOAD},version="0.8.0a6",reflexEnvironment={version};var cookie={};/*!
  * cookie
  * Copyright(c) 2012-2014 Roman Shtylman
  * Copyright(c) 2015 Douglas Christopher Wilson
