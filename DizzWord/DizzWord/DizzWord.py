@@ -8,8 +8,8 @@ from DizzWord.pages.index import index
 from DizzWord.pages.about import about
 
 
-#class State(rx.State):
-#    """The app state."""
+class State(rx.State):
+    """The app state."""
 
 
 
