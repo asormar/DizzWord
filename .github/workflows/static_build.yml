@@ -6,7 +6,7 @@ on:
       - main
 jobs:
   build:
-    if: github.repository == 'asormar/DizzWorld'
+    if: github.repository == 'asormar/dizzworld'
     runs-on: ubuntu-lastest
 
     permissions:
@@ -22,7 +22,9 @@ jobs:
           python-version: '3.11'
 
       - name: Run build script
-        run: ./DizzWorld/action_build.sh
+        run: 
+          chmod +x ./dizzword/action_build.sh
+          ./dizzworld/action_build.sh
 
       - name: Commit and Push changes
         uses: stefanweifel/git-auto-commit-action@v5
