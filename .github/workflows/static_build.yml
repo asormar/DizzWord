@@ -22,7 +22,7 @@ jobs:
           python-version: "3.11"
 
       - name: Run build script
-        run: python ./DizzWorld/action_build.sh
+        run: ./DizzWorld/action_build.sh
 
       - name: Commit and Push changes
         uses: stefanweifel/git-auto-commit-action@v5
