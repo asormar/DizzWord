@@ -7,7 +7,7 @@ on:
 jobs:
   build:
     if: github.repository == 'asormar/dizzword'
-    runs-on: ubuntu-lastest
+    runs-on: ubuntu-latest
 
     permissions:
       contents: write
@@ -22,9 +22,10 @@ jobs:
           python-version: '3.11'
 
       - name: Run build script
-        run: 
+        run: |
           chmod +x ./dizzword/action_build.sh
           ./dizzword/action_build.sh
+
 
       - name: Commit and Push changes
         uses: stefanweifel/git-auto-commit-action@v5
