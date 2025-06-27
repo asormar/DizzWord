@@ -12,10 +12,6 @@ from fastapi.security import OAuth2PasswordBearer
 from DizzWord.api.api import hello
 
 
-class State(rx.State):
-    """The app state."""
-
-
 # Create a FastAPI app
 fastapi_app = FastAPI(title="My API")
 
