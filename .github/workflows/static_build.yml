@@ -6,7 +6,7 @@ on:
       - main
 jobs:
   build:
-    if: github.repository == 'asormar/DizzWord'
+    if: github.repository == 'asormar/dizzword'
     runs-on: ubuntu-lastest
 
     permissions:
@@ -23,8 +23,8 @@ jobs:
 
       - name: Run build script
         run: 
-          chmod +x ./DizzWord/action_build.sh
-          ./DizzWord/action_build.sh
+          chmod +x ./dizzword/action_build.sh
+          ./dizzword/action_build.sh
 
       - name: Commit and Push changes
         uses: stefanweifel/git-auto-commit-action@v5
