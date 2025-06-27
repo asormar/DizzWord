@@ -7,15 +7,22 @@ from rxconfig import config
 from DizzWord.pages.index import index
 from DizzWord.pages.about import about
 
+from fastapi import FastAPI, Depends
+from fastapi.security import OAuth2PasswordBearer
+from DizzWord.api.api import hello
+
 
 class State(rx.State):
     """The app state."""
 
 
+# Create a FastAPI app
+fastapi_app = FastAPI(title="My API")
 
 app = rx.App(
     style=styles.BASE_STYLE,
-    stylesheets=styles.STYLESHEETS
+    stylesheets=styles.STYLESHEETS,
+    api_transformer=fastapi_app # Create a Reflex app with the FastAPI app as the API transformer
 )
 
 
@@ -55,3 +62,5 @@ app.add_page(
     ]
     )
 
+
+fastapi_app.add_api_route("/hello", hello)
